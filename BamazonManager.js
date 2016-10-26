@@ -27,10 +27,8 @@ var runMenu = function() {
             "Add New Product", 
         ]
     }).then(function(answer) {
-      console.log(answer);
         switch(answer.action) {
             case 'View Products for Sale':
-                console.log('heloooooo3')
                 viewProducts();
             break;
 
@@ -57,7 +55,6 @@ var viewProducts = function() {
                  console.log("Position: " + res[i].ID + " || Product Name: " + res[i].ProductName + " || Department Name: " + res[i].DepartmentName + " || Price: " + res[i].Price + "Stock Quanity: " + res[i].StockQuanity );
               console.log(" ")
              }
-
             runMenu();
         })
 };
@@ -74,7 +71,6 @@ var viewLowInventory = function(){
     runMenu();
   })
 };
-
 
 var addToInventory = function(){
   var query = 'SELECT * FROM products'

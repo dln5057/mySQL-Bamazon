@@ -1,0 +1,25 @@
+{
+  "name": "mySQL-Bamazon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "BamazonCustomer.js",
+  "dependencies": {
+    "inquirer": "^1.2.2",
+    "mysql": "^2.11.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dln5057/mySQL-Bamazon.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dln5057/mySQL-Bamazon/issues"
+  },
+  "homepage": "https://github.com/dln5057/mySQL-Bamazon#readme"
+}

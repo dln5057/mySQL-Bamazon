@@ -48,8 +48,6 @@ connection.query('SELECT * FROM products', function(err, res){
           var productQuanity = res[0].StockQuanity;
           if(productQuanity >= customerQuanity){
           var newQuanity = parseInt(productQuanity) - parseInt(customerQuanity);
-          console.log("heeeeeeeeeeee " + newQuanity);
-
           connection.query('UPDATE products SET ? WHERE ?', [{StockQuanity: newQuanity}, {ID: customerIdPick}],function(err, res){
                 console.log(res);
               });
@@ -61,17 +59,3 @@ connection.query('SELECT * FROM products', function(err, res){
       });
     });
 });
-
-    // Show quantity selected
-     
-
-      // Once the customer has placed the order, check if store has enough of the product to meet the request
-      
-        // Error Handler
-        // Check if the item Id was valid (i.e. something was returned from mySQL)
-         // end the script/connection
-        
-        // Valid Item ID, so compare Bamazon Inventory with user quantity 
-        
-          // Sufficient inventory
-          

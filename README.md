@@ -40,7 +40,7 @@ The three javascript files query to a MySQL database hosted on my personal compu
   -When first running, a prompt with a list of commands will appear allowing the user to choose by keying in a number of choice they would like.
 ![Manager Order](/ScreenShots/ManagersChoices.PNG)
   -When choosing "View products for sale" A table will appear listing all the products that are available for sale. 
-![Manager Order](/ScreenShots/ManagersChoicesRepeated.PNG)
+![Manager Order](/ScreenShots/ManagersChoiceRepeated.PNG)
   -After viewing the list of products for sale, The prompt will appear with the list of commands available for the manager user. 
   -Selecting "View Low Inventory" will list the products quantity less than 100 in stock. 
 ![Manager Order](/ScreenShots/ManagerViewLowInventory.PNG)

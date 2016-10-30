@@ -54,4 +54,4 @@ The three javascript files query to a MySQL database hosted on my personal compu
   *Enter the department for product:
   *How much will this product cost?:
   *How many will be stocked to inventory?:
-![Manager Order](/ScreenShots/ManagersAdd.PNG)
+![Manager Order](/ScreenShots/ManagerAdd.PNG)

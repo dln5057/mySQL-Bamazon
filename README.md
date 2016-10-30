@@ -26,4 +26,32 @@ The three javascript files query to a MySQL database hosted on my personal compu
 
 ## Screen shots of application in action.
 
+### `BamazonCustomer.js`
+  -These images show how the `BamazonCustomer.js` file works...
+
+  -Here the customer makes a purchase by keying in the Product ID they would like.
 ![Customer Order](/ScreenShots/CustomerPurchase1.PNG)
+  -After they have selected their product to purchase, Next you are prompted to the quanity the customer wishes to purchase. 
+![Customer Order](/ScreenShots/CustomerPurchase2.PNG)
+  
+### `BamazonManager.js`
+  -These images show how the `BamazonManager.js` file works...
+
+  -When first running, a prompt with a list of commands will appear allowing the user to choose by keying in a number of choice they would like.
+![Manager Order](/ScreenShots/ManagersChoices.PNG)
+  -When choosing "View products for sale" A table will appear listing all the products that are available for sale. 
+![Manager Order](/ScreenShots/ManagersChoicesRepeated.PNG)
+  -After viewing the list of products for sale, The prompt will appear with the list of commands available for the manager user. 
+  -Selecting "View Low Inventory" will list the products quantity less than 100 in stock. 
+![Manager Order](/ScreenShots/ManagerViewLowInventory.PNG)
+  -After viewing the low inventory products, the prompt menue will appear again.
+  -The manager user can then select to restock more product.
+  -A Prompt will show to select the product ID to restock and the quantity amount to restock.
+![Manager Order](/ScreenShots/ManagerReStock.PNG)
+  -The manager user can also select to "Add New Product". 
+  -This brings up a list of prompts that ask the manager user a series of questions..
+  *Enter Product Name You Wish to Add:
+  *Enter the department for product:
+  *How much will this product cost?:
+  *How many will be stocked to inventory?:
+![Manager Order](/ScreenShots/ManagersAdd.PNG)

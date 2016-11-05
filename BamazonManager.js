@@ -51,11 +51,15 @@ var viewProducts = function() {
         var query = 'SELECT * FROM products'
         connection.query(query, function(err, res) {
           if(err) throw err;
+          console.log("Here Is the Current Inventory... ")
              for (var i = 0; i < res.length; i++) {
-                 console.log("Position: " + res[i].ID + " || Product Name: " + res[i].ProductName + " || Department Name: " + res[i].DepartmentName + " || Price: " + res[i].Price + "Stock Quanity: " + res[i].StockQuanity );
-              console.log(" ")
-             }
-            runMenu();
+                  console.log("");
+                  console.log('------------------------------------------------------------------------------------------------------')
+                  console.log("Position: " + res[i].ID + "| Product Name: " + res[i].ProductName + "| Department Name: " + res[i].DepartmentName + "| Price: " + res[i].Price + "| Stock Quanity: " + res[i].StockQuanity );
+        
+              }
+              console.log("")
+              runMenu();
         })
 };
 
@@ -64,10 +68,14 @@ var viewLowInventory = function(){
   var query = 'SELECT * FROM Products WHERE StockQuanity < 100'
   connection.query(query, function(err, res){
     if (err) throw err;
+    console.log("This is the list of low inventory less than 100...")
     for (var i = 0; i < res.length; i++) {
-        console.log("Position: " + res[i].ID + " || Product Name: " + res[i].ProductName + " || Department Name: " + res[i].DepartmentName + " || Price: " + res[i].Price + "Stock Quanity: " + res[i].StockQuanity );
-        console.log(" ")
+        console.log("");
+        console.log('------------------------------------------------------------------------------------------------------')
+        console.log("Position: " + res[i].ID + "| Product Name: " + res[i].ProductName + "| Department Name: " + res[i].DepartmentName + "| Price: " + res[i].Price + "| Stock Quanity: " + res[i].StockQuanity );
+        
     }
+    console.log("")
     runMenu();
   })
 };
@@ -77,9 +85,12 @@ var addToInventory = function(){
         connection.query(query, function(err, res) {
           if(err) throw err;
              for (var i = 0; i < res.length; i++) {
-                 console.log("Position: " + res[i].ID + " || Product Name: " + res[i].ProductName + " || Department Name: " + res[i].DepartmentName + " || Price: " + res[i].Price + "Stock Quanity: " + res[i].StockQuanity );
-              console.log(" ")
-            }
+                console.log("");
+                console.log('------------------------------------------------------------------------------------------------------')
+                console.log("Position: " + res[i].ID + "| Product Name: " + res[i].ProductName + "| Department Name: " + res[i].DepartmentName + "| Price: " + res[i].Price + "| Stock Quanity: " + res[i].StockQuanity );
+        
+              }
+              console.log("")
           })
         inquirer.prompt([{
         name: "ID",
@@ -93,17 +104,20 @@ var addToInventory = function(){
 
     }]).then(function(answer) {
         connection.query('SELECT StockQuanity FROM products WHERE ?', [{ID: answer.ID}], function(err, res){
-          var productChoice = res[0].StockQuanity;
-          var newInventory = parseInt(productChoice) + parseInt(answer.quantity);
+        var productChoice = res[0].StockQuanity;
+        var newInventory = parseInt(productChoice) + parseInt(answer.quantity);
         var query = 'UPDATE Products SET ? WHERE ?'
         connection.query(query, [{StockQuanity: newInventory}, {ID: answer.ID}], function(err, res) {
         console.log('inventory Updated!')
         connection.query('SELECT * FROM products', function(err, res){
         if(err) throw err;
         for (var i = 0; i < res.length; i++) {
-                 console.log("Position: " + res[i].ID + " || Product Name: " + res[i].ProductName + " || Department Name: " + res[i].DepartmentName + " || Price: " + res[i].Price + "Stock Quanity: " + res[i].StockQuanity );
-              console.log(" ")
-            }
+          console.log("");
+          console.log('------------------------------------------------------------------------------------------------------')
+          console.log("Position: " + res[i].ID + "| Product Name: " + res[i].ProductName + "| Department Name: " + res[i].DepartmentName + "| Price: " + res[i].Price + "| Stock Quanity: " + res[i].StockQuanity );
+        
+        }
+        console.log("")
           })
     })
     })
@@ -141,9 +155,12 @@ var addToInventory = function(){
           connection.query('SELECT * FROM products', function(err, res){
             if(err) throw err;
             for (var i = 0; i < res.length; i++) {
-                     console.log("Position: " + res[i].ID + " || Product Name: " + res[i].ProductName + " || Department Name: " + res[i].DepartmentName + " || Price: " + res[i].Price + "Stock Quanity: " + res[i].StockQuanity );
-                  console.log(" ")
-                }
+              console.log("");
+              console.log('------------------------------------------------------------------------------------------------------')
+              console.log("Position: " + res[i].ID + "| Product Name: " + res[i].ProductName + "| Department Name: " + res[i].DepartmentName + "| Price: " + res[i].Price + "| Stock Quanity: " + res[i].StockQuanity );
+        
+            }
+            console.log("")
               })
         })
     })
